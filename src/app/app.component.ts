@@ -10,7 +10,7 @@ import {global} from './services/global';
   providers: [UserService, CategoryService]
 })
 export class AppComponent implements OnInit, DoCheck {
-  public title = 'Laravel project';
+  public title = 'ADN Detector';
   public identity;
   public categories;
   public token;
@@ -27,8 +27,8 @@ export class AppComponent implements OnInit, DoCheck {
 
   ngOnInit(){
     console.log('Webapp cargada correctamente :)');
-    console.log(this.identity);
-    this.getCategories();
+    //console.log(this.identity);
+    //this.getCategories();
   }
 
   ngDoCheck(){
@@ -36,7 +36,6 @@ export class AppComponent implements OnInit, DoCheck {
   }
 
   loadUser(){
-    this.identity = this._userService.getIdentity();
     this.token = this._userService.getToken();
   }
 

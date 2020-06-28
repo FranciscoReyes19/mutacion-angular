@@ -13,14 +13,22 @@ import { RegisterComponent } from './components/register/register.component';
 import { ErrorComponent } from './components/error/error.component';
 
 import { UserService } from './services/user.service';
-import {IdentityGuard} from './services/identity.guard';
+import { IdentityGuard} from './services/identity.guard';
+import { CardDetailComponent } from './components/card-detail/card-detail.component';
+import { AdnNewComponent } from './components/adn-new/adn-new.component';
+import { HomeComponent } from './components/home/home.component';
+
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     RegisterComponent,
-    ErrorComponent
+    ErrorComponent,
+    CardDetailComponent,
+    AdnNewComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +37,8 @@ import {IdentityGuard} from './services/identity.guard';
     HttpClientModule,
     FroalaEditorModule.forRoot(), 
     FroalaViewModule.forRoot(),
-    AngularFileUploaderModule
+    AngularFileUploaderModule,
+    AngularFontAwesomeModule
   ],
   providers: [
     appRoutingProviders,

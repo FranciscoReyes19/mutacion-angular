@@ -10,9 +10,9 @@ export class IdentityGuard implements CanActivate{
 		){}
 
 	canActivate(){
-		let identity = this._userService.getIdentity();
+		let token = this._userService.getToken();
 
-		if (identity) {
+		if (token) {
 			return true;
 		}else{
 			this._router.navigate(['/error']);

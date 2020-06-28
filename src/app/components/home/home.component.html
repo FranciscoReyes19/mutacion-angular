@@ -1,0 +1,42 @@
+<div class="loading" *ngIf="!posts">
+	Cargando...
+</div>
+<h1>{{page_title}}</h1>
+<div class="buttons-section row">
+<div class="col-3">
+		<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+			Launch demo modal
+		</button>
+		
+		<!-- Modal -->
+		<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				</div>
+				<br><br><br><br>
+				<div class="modal-body">
+					<adn-new></adn-new>
+				</div>
+				
+			</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-3">button 2</div>
+	<div class="col-3">button 3</div>
+	<div class="col-3">button 4</div>
+</div>
+<!--
+<div class="container-fluid mt-3" *ngIf="posts">
+	<hr>
+	<post-list [posts]="posts"
+	           [identity]="identity"
+	           [url]="url"
+	           ></post-list>
+</div>
+-->

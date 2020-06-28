@@ -59,7 +59,7 @@ export class UserService {
 
 	}
 
-
+	/*
 	getIdentity(){
 		let identity = JSON.parse(localStorage.getItem('identity'));
 
@@ -70,7 +70,7 @@ export class UserService {
 
 	    }
 	    return this.identity;
-	}
+	}*/
 
 	getToken(){
 		let token = localStorage.getItem('token');
