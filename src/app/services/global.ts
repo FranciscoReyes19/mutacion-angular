@@ -1,6 +1,6 @@
 export var global = {
-    url: 'http://localhost:8080/api/',
-    shorturl: 'http://localhost:8080/',
+    url: 'https://mutacion-adn-apirest.herokuapp.com/api/',
+    shorturl: 'https://mutacion-adn-apirest.herokuapp.com/',
 	
 	//funciona anonima
 	htmlEntities: function(str) {
