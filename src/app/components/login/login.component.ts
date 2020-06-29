@@ -34,9 +34,8 @@ export class LoginComponent implements OnInit {
   onSubmit(form){
   	 this._userService.signup(this.user).subscribe(
   	 	response => {
-			console.log(response);
 			   // TOKEN
-  	 		if (response.status != 'error') {
+  	 		if (response.accessToken != null) {
   	 			this.status = 'success';
   	 			this.token = response.accessToken;
 						   
@@ -60,8 +59,7 @@ export class LoginComponent implements OnInit {
 
   			if (logout == 1) {
   				localStorage.removeItem('token');
-
-  				this.token = null;
+				this.token = null;
 
   				//REDIRECCION A INICIO
   				this._router.navigate(['login']);

@@ -15,7 +15,7 @@ import {IdentityGuard} from './services/identity.guard';
 const appRoutes:Routes = [
    {path: '',component: LoginComponent},
    {path: 'login',component: LoginComponent},
-   {path: 'home',component: HomeComponent},
+   {path: 'home',component: HomeComponent, canActivate: [IdentityGuard]},
    {path: 'register-adn',component: AdnNewComponent},
    {path: 'logout/:sure',component: LoginComponent},
    {path: 'registro',component: RegisterComponent},

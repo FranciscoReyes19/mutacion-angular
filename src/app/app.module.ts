@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { routing, appRoutingProviders } from './app.routing';
 import { FroalaEditorModule, FroalaViewModule } from 'angular-froala-wysiwyg';
 import { AngularFileUploaderModule } from "angular-file-uploader";
+import { MomentModule } from 'angular2-moment';
 
 
 import { AppComponent } from './app.component';
@@ -38,7 +39,8 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
     FroalaEditorModule.forRoot(), 
     FroalaViewModule.forRoot(),
     AngularFileUploaderModule,
-    AngularFontAwesomeModule
+    AngularFontAwesomeModule,
+    MomentModule,
   ],
   providers: [
     appRoutingProviders,

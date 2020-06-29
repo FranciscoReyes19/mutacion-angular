@@ -16,10 +16,6 @@ export class AdnService {
         this.shorturl = global.shorturl;
     }
 
-    prueba(){
-    	return "hola desde el servicio";
-    }
-
     create(token, adn): Observable<any>{
     	//remplazar html entities to UTF-8 >>INICIO
         adn.content = global.htmlEntities(adn.content);
@@ -32,15 +28,24 @@ export class AdnService {
        return this._http.post(this.shorturl+'mutation',params,{headers: headers});
 
     }
-    
-    
-    /*
-    getPosts(): Observable<any>{
+    getExpedientes(): Observable<any>{
 
-        let headers = new HttpHeaders().set('Content-Type','application/x-www-form-urlencoded');
+        let headers = new HttpHeaders().set('Content-Type','application/json');
 
-        return this._http.get(this.url+'post',{headers:headers});
+        return this._http.get(this.shorturl+'mutation',{headers:headers});
 
     }
-    */
+
+    getExpedientesByMutation(hasMutation): Observable<any>{
+        console.log(hasMutation);
+        let params = '{"hasMutation":'+hasMutation+'}';
+        //let params = JSON.parse(has);
+        let headers = new HttpHeaders().set('Content-Type','application/json');
+
+        return this._http.post(this.shorturl+'mutationby',params,{headers:headers});
+
+    }
+    getStats(): Observable<any>{
+        return this._http.get(this.shorturl+'stats');
+    }
 }

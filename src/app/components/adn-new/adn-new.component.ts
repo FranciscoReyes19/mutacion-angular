@@ -37,9 +37,9 @@ export class AdnNewComponent implements OnInit {
     //Calling adn service to execute create operation
     this._adnService.create(this.token,this.adn_model).subscribe(
      response => {
-     console.log(response);
         // TOKEN
-        if (response.status != 'error') {
+        if (response.success) {
+          console.log(response);
           this.status = 'success';
           this._router.navigate(['home']);
         }
